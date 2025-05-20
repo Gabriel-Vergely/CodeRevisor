@@ -6,13 +6,13 @@ Esta aplicación realiza un análisis estático de seguridad sobre repositorios 
 
 ## 📁 Estructura del Proyecto
 
-.  
-   ├── api/ # Lógica principal (incluye integración con semgrep)
-   ├── servicios/ # Módulos de servicio (por ejemplo, procesamiento del webhook)
-   ├── main.py # Punto de entrada
-   ├── requirements.txt # Dependencias del proyecto
-   ├── README.md # Esta guía
-   ├── venv/ # Entorno virtual (opcional)
+      .  
+      ├── api/ # Lógica principal (incluye integración con semgrep)
+      ├── servicios/ # Módulos de servicio (por ejemplo, procesamiento del webhook)
+      ├── main.py # Punto de entrada
+      ├── requirements.txt # Dependencias del proyecto
+      ├── README.md # Esta guía
+      ├── venv/ # Entorno virtual (opcional)
 
 
 ---
