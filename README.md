@@ -49,7 +49,9 @@ Copia la clave pública y añádela a tu cuenta de GitHub:
 
 Para recibir webhooks desde GitHub, necesitas una URL pública. Usa Serveo:
 
+```bash
 ssh -R 80:localhost:8000 serveo.net
+```
 
 Esto expondrá tu servidor local en una URL como:
 
@@ -64,7 +66,7 @@ Nota: No cierres esta terminal mientras el túnel esté activo.
 
     En "Payload URL" pon tu URL de Serveo, por ejemplo:
 
-https://yourname.serveo.net/webhook
+      https://yourname.serveo.net/webhook
 
     En "Content type" selecciona: application/json
 
@@ -78,11 +80,15 @@ Esta app usa Semgrep para hacer un análisis estático del repositorio.
 
 Instalación:
 
+```bash
 pip install semgrep
+```
 
 Uso básico:
 
+```bash
 semgrep --config auto .
+```
 
 En el código ya se incluye una función que ejecuta Semgrep automáticamente sobre el repositorio clonado desde el webhook.
 
@@ -90,27 +96,31 @@ En el código ya se incluye una función que ejecuta Semgrep automáticamente so
 
 ## ▶️ Ejecutar la Aplicación
 
-    Instala las dependencias:
+Instala las dependencias:
 
+```bash
 pip install -r requirements.txt
+```
 
 Ejecuta el servidor:
 
+```bash
 python main.py
+```
 
 Mantén abierto el túnel de Serveo:
 
     ssh -R 80:localhost:8000 serveo.net
 
-    Espera los push a tu repositorio, y revisa los análisis en consola o donde los tengas configurados.
+Espera los push a tu repositorio, y revisa los análisis en consola o donde los tengas configurados.
 
 ---
 
 ## 📌 Notas
 
-    Puedes usar otras herramientas además de Semgrep (como Bandit, Trivy, Gitleaks, etc.).
+Puedes usar otras herramientas además de Semgrep (como Bandit, Trivy, Gitleaks, etc.).
 
-    Serveo es útil para pruebas locales, pero considera usar servicios como Ngrok si necesitas más fiabilidad o autenticación.
+Serveo es útil para pruebas locales, pero considera usar servicios como Ngrok si necesitas más fiabilidad o autenticación.
 
 ---
 
